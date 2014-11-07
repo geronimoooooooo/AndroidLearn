@@ -1,0 +1,72 @@
+{
+    "boss1": [
+        {
+            "hash": {
+                "0": "0 zero",
+                "1": "1 uno"
+            },
+            "array": [
+                "zero",
+                "uno"
+            ],
+            "name": "GeoZilla"
+        },
+        {
+            "hash": {
+                "0": "0 zero",
+                "1": "1 uno"
+            },
+            "array": [
+                "zero",
+                "uno"
+            ],
+            "name": "GeoZilla"
+        },
+        {
+            "hash": {
+                "0": "0 zero",
+                "1": "1 uno"
+            },
+            "array": [
+                "zero",
+                "uno"
+            ],
+            "name": "GeoZilla"
+        }
+    ],
+    "boss2": [
+            {
+                "hash": {
+                    "0": "0 zero",
+                    "1": "1 uno"
+                },
+                "array": [
+                    "zero",
+                    "uno"
+                ],
+                "name": "GeoZilla"
+            },
+            {
+                "hash": {
+                    "0": "0 zero",
+                    "1": "1 uno"
+                },
+                "array": [
+                    "zero",
+                    "uno"
+                ],
+                "name": "GeoZilla"
+            },
+            {
+                "hash": {
+                    "0": "0 zero",
+                    "1": "1 uno"
+                },
+                "array": [
+                    "zero",
+                    "uno"
+                ],
+                "name": "GeoZilla"
+            }
+        ]
+}
