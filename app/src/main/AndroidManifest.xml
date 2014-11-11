@@ -8,7 +8,11 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
+<<<<<<< HEAD
             android:name="and.androidlearn.nfr_start"
+=======
+            android:name="and.androidlearn.MainActivity"
+>>>>>>> origin/master
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,10 +24,13 @@
             android:name="and.androidlearn.Boss1"
             android:label="@string/title_activity_boss1" >
         </activity>
+<<<<<<< HEAD
         <activity
             android:name="and.androidlearn.MainActivity"
             android:label="Bosses" >
         </activity>
+=======
+>>>>>>> origin/master
     </application>
 
 </manifest>
