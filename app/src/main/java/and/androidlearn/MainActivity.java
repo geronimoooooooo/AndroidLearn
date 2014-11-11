@@ -15,7 +15,7 @@ public class MainActivity extends Activity {
     /**
      * This are some buttons.
      */
-    Button button_boss1, button_boss2;
+    private Button button_boss1, button_boss2;
     TextView tv_intro;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
