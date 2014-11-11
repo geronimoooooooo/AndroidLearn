@@ -14,5 +14,6 @@
     <string name="button_pull">PULL!!</string>
     <string name="tv_logo">nfr</string>
     <string name="tv_pw">password</string>
+    <string name="title_activity_points">Points</string>
 
 </resources>

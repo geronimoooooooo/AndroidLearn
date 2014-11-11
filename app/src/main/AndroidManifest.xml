@@ -20,12 +20,14 @@
             android:name="and.androidlearn.Boss1"
             android:label="@string/title_activity_boss1" >
         </activity>
-
         <activity
             android:name="and.androidlearn.MainActivity"
             android:label="Bosses" >
         </activity>
-
+        <activity
+            android:name="and.androidlearn.Points"
+            android:label="@string/title_activity_points" >
+        </activity>
     </application>
 
 </manifest>

@@ -1,6 +1,7 @@
 package and.androidlearn;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.JsonReader;
 import android.view.Menu;
@@ -23,12 +24,18 @@ import java.util.Iterator;
  */
 public class Boss1 extends Activity {
 
-    TextView tv_question;
+    TextView tv_question, tv_questionAmount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_boss1);
+
+        Intent in = getIntent();
+        Helper h = (Helper) in.getSerializableExtra("bundle");
+
+        tv_questionAmount = (TextView)findViewById(R.id.tv_questionAmount);
+        tv_questionAmount.setText(Integer.toString(h.getFavouriteNumber()));
 
         tv_question = (TextView)findViewById(R.id.tv_question);
         try {

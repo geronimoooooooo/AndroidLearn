@@ -31,8 +31,10 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                 tv_intro.setText(R.string.button_Boss1);
 
+                Helper h = new Helper("Test",100);
                 Boss1 boss1 = new Boss1();
                 Intent intent = new Intent(getApplicationContext() ,Boss1.class);
+                intent.putExtra("bundle",h);
                 startActivity(intent);
             }
         });
