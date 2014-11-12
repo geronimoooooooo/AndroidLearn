@@ -3,15 +3,11 @@ package and.androidlearn;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.JsonReader;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
-
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -31,11 +27,13 @@ public class Boss1 extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_boss1);
 
+        tv_questionAmount = (TextView)findViewById(R.id.tv_questionAmount);
+
         Intent in = getIntent();
         Helper h = (Helper) in.getSerializableExtra("bundle");
-
-        tv_questionAmount = (TextView)findViewById(R.id.tv_questionAmount);
-        tv_questionAmount.setText(Integer.toString(h.getFavouriteNumber()));
+        tv_questionAmount.setText("abd");
+        if(h instanceof Helper)
+            tv_questionAmount.setText(Integer.toString(h.getFavouriteNumber()));
 
         tv_question = (TextView)findViewById(R.id.tv_question);
         try {

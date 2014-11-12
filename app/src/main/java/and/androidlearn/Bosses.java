@@ -10,17 +10,18 @@ import android.widget.Button;
 import android.widget.TextView;
 
 
-public class MainActivity extends Activity {
+public class Bosses extends Activity {
 
     /**
      * This are some buttons.
      */
     private Button button_boss1, button_boss2;
     TextView tv_intro;
+    public final String EXTRA_MESSAGE ="Test";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_bosses);
 
         button_boss1 = (Button)findViewById(R.id.button_boss1);
         button_boss2 = (Button)findViewById(R.id.button_boss2);
@@ -38,6 +39,17 @@ public class MainActivity extends Activity {
                 startActivity(intent);
             }
         });
+
+        button_boss2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle bundle = new Bundle();
+                bundle.putString(EXTRA_MESSAGE,"this is EXTRA_MESSAGE");
+                Intent in = new Intent(getApplicationContext(),Boss1.class);
+                startActivity(in);
+            }
+        });
+
     }
 
 

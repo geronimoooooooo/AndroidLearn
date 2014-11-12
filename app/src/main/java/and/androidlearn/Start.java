@@ -9,19 +9,19 @@ import android.view.View;
 import android.widget.Button;
 
 
-public class nfr_start extends Activity {
+public class Start extends Activity {
 
     Button button_pull;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nfr_start);
+        setContentView(R.layout.activity_start);
         button_pull = (Button)findViewById(R.id.button_pull);
 
         button_pull.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), Bosses.class);
                 startActivity(intent);
             }
         });
