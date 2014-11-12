@@ -1,8 +1,12 @@
 package and.androidlearn;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.telephony.TelephonyManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -43,15 +47,39 @@ public class Bosses extends Activity {
         button_boss2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Bundle bundle = new Bundle();
+                alertDialogCaller();
+  /*              Bundle bundle = new Bundle();
                 bundle.putString(EXTRA_MESSAGE,"this is EXTRA_MESSAGE");
                 Intent in = new Intent(getApplicationContext(),Boss1.class);
-                startActivity(in);
+                startActivity(in);*/
             }
         });
 
     }
+    public void alertDialogCaller(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(Bosses.this);
+        builder.setMessage(
+            "Please create a HashMap as the first step \nand wait for GPS signal!")
+            .setCancelable(false)
+            .setPositiveButton("OK",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                            // do things
+                        }
+                    });
+        AlertDialog alert = builder.create();
+        alert.show();
+        //getIMEI(); da im Emulator nicht geht
+    }
 
+    /**
+     * Geht irgendwie nicht im Emulator: Requires READ_PHONE_STATE: Neither user 10054 nor current process has android.permission.READ_PHONE_STATE.
+     */
+    public void getIMEI() {
+        TelephonyManager telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+        String IMEIString = telephonyManager.getDeviceId();
+        System.out.println(IMEIString);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
