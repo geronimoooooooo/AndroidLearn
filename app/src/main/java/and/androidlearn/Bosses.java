@@ -69,16 +69,14 @@ public class Bosses extends Activity {
                     });
         AlertDialog alert = builder.create();
         alert.show();
-        //getIMEI(); da im Emulator nicht geht
+        getIMEI();
     }
 
-    /**
-     * Geht irgendwie nicht im Emulator: Requires READ_PHONE_STATE: Neither user 10054 nor current process has android.permission.READ_PHONE_STATE.
-     */
+
     public void getIMEI() {
         TelephonyManager telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
         String IMEIString = telephonyManager.getDeviceId();
-        System.out.println(IMEIString);
+        System.out.println("IMEIString : "+IMEIString);
     }
 
     @Override
